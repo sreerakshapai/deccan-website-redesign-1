@@ -1,0 +1,22 @@
+{
+  "name": "deccan-website-redesign",
+  "version": "1.0.0",
+  "description": "Website for Deccan Plast Industries, Baikampady, Mangalore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "VIBS Mangalore",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylus": "^2.7.0",
+    "run-sequence": "^2.2.1"
+  }
+}
