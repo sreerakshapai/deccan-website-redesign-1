@@ -1,0 +1,36 @@
+extends partials/head.pug
+
+block title 
+        title Contact
+
+block content
+    .container
+        .card
+            .card-content
+                h1.page-title.center-align  Contact
+        .row
+           form.col.s12.
+        .row
+          .input-field.col.s6
+           input#first_name.validate( type='text')
+           label(for='first_name') First Name
+          .input-field.col.s6
+           input#last_name.validate(type='text')
+           label(for='last_name') Last Name
+        .row
+         .input-field.col.s12
+          input#password.validate(type='password')
+          label(for='password') Password
+        .row
+         .input-field.col.s12
+          input#email.validate(type='email')
+          label(for='email') Email
+        .row
+         .input-field.col.s12
+          input#email.validate(type='text')
+          label(for='message') Message
+          <a class="btn btn-default">Submit</a>
+
+
+          
+          
