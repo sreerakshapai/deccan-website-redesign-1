@@ -42,16 +42,14 @@ body
 .content
     min-height: 100vh
     .lead
-        font-weight: bold;
-        color: #636363;
+        font-weight bold
+        color #636363
     .solutions-card
-        margin 5% auto
-        height 350px
-        width 250px
+        height 450px
     .category-card
-        margin 5% auto
-        height 325px
-        width 200px
+        height 360px
+    .ritz-card
+        height 500px
     .category-page-img
         max-height 50vh
     .category-title, .page-title
@@ -62,24 +60,20 @@ body
         text-align justify
     .feature-list
         list-style-type square
+        margin-left 20px
  
     form
         text-align center
         padding 20px 20px
         color red
 
-    label,type
+    label
         color #C62828 
         font-weight 300
         z-index 1
         font-weight 700
-    .row,.input-field
-        width 70%    
     .label
         color black
-      
-
-
 .btn 
 	border none
     width 200px
@@ -94,6 +88,21 @@ body
     border-radius 5px
     margin-right 6px
 
+// Medium Devices
+@media screen and (max-width: 900px)
+    .solutions-card
+        max-height 325px
+    .category-card
+        min-height 400px
+    .ritz-card
+        min-height 525px        
+
+// Mobile Phone
+@media screen and (max-width: 600px)
+    .solutions-card
+        max-height 400px
+    .category-card
+        min-height 400px
 
 .wrapper
     min-height 100vh
