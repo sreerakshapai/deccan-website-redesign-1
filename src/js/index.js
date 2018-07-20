@@ -1,15 +1,18 @@
 const menuToggle = document.getElementById('menu-toggle');
 const menuClose = document.getElementById('menu-close')
 const sideNav = document.querySelector('.sidenav');
-const carousel = document.querySelectorAll('.carousel');
-const elems = document.querySelectorAll('.carousel');
+const mainSlider = document.getElementById('main-slider');
+const newArrivalCarousel = document.getElementById('new-arrival-carousel');
 
 
 document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Sidenav.init(sideNav);
-    var slider = M.Carousel.init(carousel, {
+    var slider1 = M.Carousel.init(mainSlider, {
         fullWidth: true
       });
+    var carousel1 = M.Carousel.init(newArrivalCarousel, {
+        indicators: true
+    })      
   });
 // document.addEventListener('DOMContentLoaded', function() {
 //     var elems = document.querySelectorAll('.carousel');

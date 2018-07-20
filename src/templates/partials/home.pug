@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        //- Materialize
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css")
+        //- Material Icons
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        //- Font Awesome
+        link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.1.1/css/all.css", integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ", crossorigin="anonymous")
+        //- Main Style Sheet
+        link(rel="stylesheet", href="css/main.css")
+        //- Owl Carousel
+        link(rel="stylesheet", href="css/owl.carousel.min.css")
+        link(rel="stylesheet", href="css/owl.theme.default.min.css")
+        block title
+            title Deccan Plast Industries, Mangalore
+    body
+        a#home-menu-toggle.menu-icon.waves-effect.waves-light.btn-floating.btn-small.red.index-toggle
+            i.material-icons menu
+        #side-nav.sidenav
+            block side-nav
+                include slide-nav.pug
+            block footer
+                include footer.pug
+        .content
+            block content
+        .footer
+            block main-footer
+                include main-footer.pug
+        block scripts
+            include owl.pug
+            include scripts.pug

@@ -17,7 +17,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('compile-html', function(){
-    gulp.src('src/templates/*.pug')
+    gulp.src('src/templates/**/*.pug')
     .pipe(pug())
     .pipe(gulp.dest('build'));
 })
@@ -26,7 +26,9 @@ gulp.task('compile-css', function(){
     gulp.src('src/css/*.styl')
       .pipe(stylus())
       .pipe(minifyCSS())
-      .pipe(gulp.dest('build/css'))
+      .pipe(gulp.dest('build/css'));
+    gulp.src('src/css/*.css')
+    .pipe(gulp.dest('build/css'));      
 });
 
 gulp.task('compile-js', function(){
