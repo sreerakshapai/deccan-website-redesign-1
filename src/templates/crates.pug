@@ -30,7 +30,7 @@ block content
                                         span.card-title.grey-text.text-darken-4 Jumbo Crate Double Wall 
                                         p.price MRP: ₹ 1115/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
+                                             a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Jumbo Crate Double Wall ")
                                                 i.material-icons shopping_cart
                             .col.m6.l3
                                 .card.product-card.z-depth-2
@@ -40,8 +40,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Jumbo Crate Single Wall 
                                         p.price MRP: ₹ 1075/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Jumbo Crate Single Wall")
+                                                i.material-icons shopping_cart   
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -50,8 +50,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Jumbo Crate Single Wall With Handle
                                         p.price MRP: ₹ 1130/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart                           
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Jumbo Crate Single Wall With Handle")
+                                                i.material-icons shopping_cart                                       
                         .row.center-align
                             h3 Utility Crates
                             p.category-description Stackable Utility crates with sides closed. Multipurpose solid crate for fishery, industrial and retail business, processed foods storing and transporting.
@@ -70,8 +70,8 @@ block content
 
                                         p.price MRP: ₹ 785/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart   
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="MP 21 Utility Crate")
+                                                i.material-icons shopping_cart               
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -80,8 +80,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 MP 22 Utility Crate
                                         p.price MRP: ₹ 705/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart                                 
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="MP 22 Utility Crate")
+                                                i.material-icons shopping_cart                                  
                         .row.center-align
                             h3 Multipurpose Crates
                             p.category-description Multipurpose jaali crate for veg, fruits, processed foods storing and transporting.
@@ -99,8 +99,9 @@ block content
                                         span.card-title.grey-text.text-darken-4 Multipurpose Crates 
                                         p.price MRP: ₹ 445/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart                                                                                                                                                                                            .row.center-align
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Multipurpose Crates")
+                                                i.material-icons shopping_cart                                                                                                                                                                                               .row.center-align
+                        .row.center-align
                             h3 Mini Veg Crates
                             p.category-description Multipurpose jaali crate for tomato, flowers, storing and transporting.
                             p.category-description
@@ -118,8 +119,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 MP11 Mini Veg Crates 
                                         p.price MRP: ₹ 350/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart     
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="MP11 Mini Veg Crates")
+                                                i.material-icons shopping_cart          
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -128,8 +129,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 MP12 Mini Veg Crates 
                                         p.price MRP: ₹ 350/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart     
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="MP12 Mini Veg Crates")
+                                                i.material-icons shopping_cart                   
                         .row.center-align
                             h3 Bottle Crates
                             p.category-description Stackable Crates for soda and cold beverage industry for storing and transport. Ideal for branding product logo.
@@ -150,10 +151,39 @@ block content
                                         span.card-title.grey-text.text-darken-4 Bottle Crates 
                                         p.price MRP: ₹ 350/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart                             
+                                             a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Bottle Crates")
+                                                i.material-icons shopping_cart                                   
                     a(href="material-handling-solutions.html" class="waves-effect waves-light btn-large red") 
                         i.material-icons.left home
                         | Home
+
+                    #quote-modal.modal
+                        .modal-content
+                        h3 Modal Header
+                        p Please fill all your details.
+                        form(action="", id="request-quote-form")
+                            .input-field
+                                input(placeholder="John Doe", id="rq-name", type="text", class="validate")
+                                label(for="rq-name") Name
+                            .input-field
+                                input(placeholder="johndoe@gmail.com", id="rq-email", type="email", class="validate")
+                                label(for="rq-email") Email
+                            .input-field
+                                input(placeholder="10 Digit Mobile No", id="rq-phone", type="tel", class="validate")
+                                label(for="rq-phone") Phone    
+                            .input-field
+                                input(placeholder="575001", id="rq-pincode", type="number", class="validate")
+                                label(for="rq-pincode") Pincode
+                            .input-field
+                                input(placeholder="Mangalore", id="rq-location", type="text", class="validate")
+                                label(for="rq-location") Location
+                            .input-field
+                                textarea#rq-message.materialize-textarea  
+                                label(for="rq-message")  Message                                                                                           
+                        .modal-footer
+                        a.modal-send.waves-effect.waves-green.btn.btn-flat(href="#") Send
+                        a.modal-close.waves-effect.waves-green.btn.btn-flat(href="#") Close
+
+
 
                 

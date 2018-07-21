@@ -36,8 +36,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Nano RED
                                         p.price MRP: ₹ 515/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Nano RED")
+                                                i.material-icons shopping_cart  
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -46,14 +46,15 @@ block content
                                         span.card-title.grey-text.text-darken-4 Nano PBL 
                                         p.price MRP: ₹ 515/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Nano PBL")
+                                                i.material-icons shopping_cart  
                         .center-align                                                        
                                     a(href="products.html" class="waves-effect waves-light btn-small red") 
                                         i.material-icons.left home
                                         | Home                                                   
-                        #quote-modal.modal
-                        .modal-content
+                       
+                #quote-modal.modal
+                    .modal-content
                         h3 Modal Header
                         p Please fill all your details.
                         form(action="", id="request-quote-form")
@@ -78,7 +79,5 @@ block content
                     .modal-footer
                         a.modal-send.waves-effect.waves-green.btn.btn-flat(href="#") Send
                         a.modal-close.waves-effect.waves-green.btn.btn-flat(href="#") Close
-
-
 
                 
