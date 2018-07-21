@@ -42,8 +42,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Lexus TCO
                                         p.price MRP: ₹ 785/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                           a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Lexus TCO")
+                                                i.material-icons shopping_cart      
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -52,8 +52,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Lexus DBR 
                                         p.price MRP: ₹ 785/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Lexus DBR")
+                                                i.material-icons shopping_cart      
                 h3.product-title.center-align Porsche
                 p.category-description 
                     strong Porsche 
@@ -88,8 +88,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Porsche RWD
                                         p.price MRP: ₹ 785/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Porsche RWD")
+                                                i.material-icons shopping_cart      
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -98,9 +98,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Porsche MWD 
                                         p.price MRP: ₹ 785/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
-
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Porsche MWD")
+                                                i.material-icons shopping_cart      
                 h3.product-title.center-align Mercedes
                 p.category-description 
                     strong Mercedes 
@@ -133,8 +132,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Mercedes TCO
                                         p.price MRP: ₹ 785/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Mercedes TCO")
+                                                i.material-icons shopping_cart      
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -143,10 +142,38 @@ block content
                                         span.card-title.grey-text.text-darken-4 Mercedes DBR 
                                         p.price MRP: ₹ 870/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Mercedes DBR")
+                                                i.material-icons shopping_cart              
                 .center-align
                     a(href="furniture.html" class="waves-effect waves-light btn-large red") 
                         i.material-icons.left home
                         | Home
+                #quote-modal.modal
+                    .modal-content
+                        h3 Modal Header
+                        p Please fill all your details.
+                        form(action="", id="request-quote-form")
+                            .input-field
+                                input(placeholder="John Doe", id="rq-name", type="text", class="validate")
+                                label(for="rq-name") Name
+                            .input-field
+                                input(placeholder="johndoe@gmail.com", id="rq-email", type="email", class="validate")
+                                label(for="rq-email") Email
+                            .input-field
+                                input(placeholder="10 Digit Mobile No", id="rq-phone", type="tel", class="validate")
+                                label(for="rq-phone") Phone    
+                            .input-field
+                                input(placeholder="575001", id="rq-pincode", type="number", class="validate")
+                                label(for="rq-pincode") Pincode
+                            .input-field
+                                input(placeholder="Mangalore", id="rq-location", type="text", class="validate")
+                                label(for="rq-location") Location
+                            .input-field
+                                textarea#rq-message.materialize-textarea  
+                                label(for="rq-message")  Message                                                                                           
+                    .modal-footer
+                        a.modal-send.waves-effect.waves-green.btn.btn-flat(href="#") Send
+                        a.modal-close.waves-effect.waves-green.btn.btn-flat(href="#") Close
+
+
 

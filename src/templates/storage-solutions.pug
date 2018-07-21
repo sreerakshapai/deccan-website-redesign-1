@@ -32,8 +32,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Liberty Big
                                         p.price MRP: ₹ 7500/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart     
+                                           a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Liberty Big")
+                                                i.material-icons shopping_cart 
                 .card.product
                     .card-content
                      h3.product-title.center-align Liberty Cabinets Small
@@ -55,8 +55,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Liberty Small
                                         p.price MRP: ₹ 4425/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart     
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Liberty Small")
+                                                i.material-icons shopping_cart 
                 .card.product
                     .card-content
                      h3.product-title.center-align Liberty Shoe Rack
@@ -78,12 +78,40 @@ block content
                                         span.card-title.grey-text.text-darken-4 Liberty Shoe Rack
                                         p.price MRP: ₹ 4425/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart     
+                                             a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Liberty Shoe Rack")
+                                                i.material-icons shopping_cart 
                                                     
               
                 .center-align
                     a(href="products.html" class="waves-effect waves-light btn-large red") 
                         i.material-icons.left home
                         | Home
+                #quote-modal.modal
+                    .modal-content
+                        h3 Modal Header
+                        p Please fill all your details.
+                        form(action="", id="request-quote-form")
+                            .input-field
+                                input(placeholder="John Doe", id="rq-name", type="text", class="validate")
+                                label(for="rq-name") Name
+                            .input-field
+                                input(placeholder="johndoe@gmail.com", id="rq-email", type="email", class="validate")
+                                label(for="rq-email") Email
+                            .input-field
+                                input(placeholder="10 Digit Mobile No", id="rq-phone", type="tel", class="validate")
+                                label(for="rq-phone") Phone    
+                            .input-field
+                                input(placeholder="575001", id="rq-pincode", type="number", class="validate")
+                                label(for="rq-pincode") Pincode
+                            .input-field
+                                input(placeholder="Mangalore", id="rq-location", type="text", class="validate")
+                                label(for="rq-location") Location
+                            .input-field
+                                textarea#rq-message.materialize-textarea  
+                                label(for="rq-message")  Message                                                                                           
+                    .modal-footer
+                        a.modal-send.waves-effect.waves-green.btn.btn-flat(href="#") Send
+                        a.modal-close.waves-effect.waves-green.btn.btn-flat(href="#") Close
+
+
 

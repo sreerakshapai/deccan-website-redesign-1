@@ -40,8 +40,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Figo PWD
                                         p.price MRP: ₹ 515/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                             a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Figo PWD")
+                                                i.material-icons shopping_cart       
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -50,8 +50,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Figo RWD 
                                         p.price MRP: ₹ 515/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                             a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Figo RWD")
+                                                i.material-icons shopping_cart       
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -60,8 +60,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Figo MBG 
                                         p.price MRP: ₹ 515/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                             a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Figo MBG")
+                                                i.material-icons shopping_cart       
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -70,8 +70,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Figo RED 
                                         p.price MRP: ₹ 515/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                             a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Figo RED")
+                                                i.material-icons shopping_cart       
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -80,7 +80,9 @@ block content
                                         span.card-title.grey-text.text-darken-4 Figo MHG 
                                         p.price MRP: ₹ 515/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
+                                             a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Figo MHG")
+                                                i.material-icons shopping_cart       
+
                 h3.product-title.center-align Polo
 
                 p.category-description 
@@ -94,7 +96,7 @@ block content
                     li.feature-list  Easy to stack and transport
                 p.category-description 
                     strong Recommended 
-                    | for homes, restaurants, dhabas, tent houses, marriage halls or renting business, etc                                    i.material-icons shopping_cart
+                    | for homes, restaurants, dhabas, tent houses, marriage halls or renting business, etc                                    
                 .card.product
                     .card-content
                         .row.center-align
@@ -106,8 +108,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Polo PWD
                                         p.price MRP: ₹ 515/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Polo PWD")
+                                                i.material-icons shopping_cart              
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -116,8 +118,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Polo RWD 
                                         p.price MRP: ₹ 515/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Polo RWD")
+                                                i.material-icons shopping_cart              
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -126,8 +128,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Polo MBG 
                                         p.price MRP: ₹ 515/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Polo MBG")
+                                                i.material-icons shopping_cart              
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -136,10 +138,38 @@ block content
                                         span.card-title.grey-text.text-darken-4 Polo RED 
                                         p.price MRP: ₹ 515/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart                                        
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Polo RED")
+                                                i.material-icons shopping_cart                                     
                 .center-align
                     a(href="furniture.html" class="waves-effect waves-light btn-large red") 
                         i.material-icons.left home
                         | Home
+                #quote-modal.modal
+                    .modal-content
+                        h3 Modal Header
+                        p Please fill all your details.
+                        form(action="", id="request-quote-form")
+                            .input-field
+                                input(placeholder="John Doe", id="rq-name", type="text", class="validate")
+                                label(for="rq-name") Name
+                            .input-field
+                                input(placeholder="johndoe@gmail.com", id="rq-email", type="email", class="validate")
+                                label(for="rq-email") Email
+                            .input-field
+                                input(placeholder="10 Digit Mobile No", id="rq-phone", type="tel", class="validate")
+                                label(for="rq-phone") Phone    
+                            .input-field
+                                input(placeholder="575001", id="rq-pincode", type="number", class="validate")
+                                label(for="rq-pincode") Pincode
+                            .input-field
+                                input(placeholder="Mangalore", id="rq-location", type="text", class="validate")
+                                label(for="rq-location") Location
+                            .input-field
+                                textarea#rq-message.materialize-textarea  
+                                label(for="rq-message")  Message                                                                                           
+                    .modal-footer
+                        a.modal-send.waves-effect.waves-green.btn.btn-flat(href="#") Send
+                        a.modal-close.waves-effect.waves-green.btn.btn-flat(href="#") Close
+
+
 
