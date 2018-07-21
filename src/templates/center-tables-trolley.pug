@@ -33,8 +33,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Innova MHG
                                         p.price MRP: ₹ 875/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Innova MHG")
+                                                i.material-icons shopping_cart  
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -43,8 +43,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Innova  PWD 
                                         p.price MRP: ₹ 875/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Innova PWD")
+                                                i.material-icons shopping_cart  
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -53,32 +53,32 @@ block content
                                         span.card-title.grey-text.text-darken-4 Innova RWD 
                                         p.price MRP: ₹ 875/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Innova RWD")
+                                                i.material-icons shopping_cart  
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
-                                        img(src="images/products/furniture/s_mangalore_dining_2.png", alt="Innova Center Tables and Trolleys, Deccan Plast Industries.")
+                                        img(src="images/products/furniture/s_innova_3.png", alt="Innova Center Tables and Trolleys, Deccan Plast Industries.")
                                     .card-content.center-align
                                         span.card-title.grey-text.text-darken-4 Innova DBR 
                                         p.price MRP: ₹ 875/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart   
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Innova DBR")
+                                                i.material-icons shopping_cart       
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
-                                        img(src="images/products/furniture/s_mangalore_dining_2.png", alt="Innova Center Tables and Trolleys, Deccan Plast Industries.")
+                                        img(src="images/products/furniture/s_innova_3.png", alt="Innova Center Tables and Trolleys, Deccan Plast Industries.")
                                     .card-content.center-align
                                         span.card-title.grey-text.text-darken-4 Innova MBG 
                                         p.price MRP: ₹ 875/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart                                      
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Innova MBG")
+                                                i.material-icons shopping_cart                                              
                 .card.product
                     .card-content
                         h3.product-title.center-align Swift
-                        p.center-align Dimensions (Innova): (H) 775 mm, (W) 425 mm, (D) 485 mm
+                        p.center-align Dimensions (swift): (H) 775 mm, (W) 425 mm, (D) 485 mm
 
                         .row.center-align
                             .col.m6.l3.offset-l1
@@ -89,8 +89,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Swift PWD
                                         p.price MRP: ₹ 805/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Swift PWD")
+                                                i.material-icons shopping_cart           
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -99,8 +99,8 @@ block content
                                         span.card-title.grey-text.text-darken-4 Swift RWD 
                                         p.price MRP: ₹ 805/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Swift RWD")
+                                                i.material-icons shopping_cart           
                             .col.m6.l3
                                 .card.product-card.z-depth-2
                                     .card-image
@@ -109,10 +109,38 @@ block content
                                         span.card-title.grey-text.text-darken-4 Swift DBR 
                                         p.price MRP: ₹ 805/-
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart               
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Swift DBR")
+                                                i.material-icons shopping_cart                  
                 .center-align
                     a(href="furniture.html" class="waves-effect waves-light btn-large red") 
                         i.material-icons.left home
                         | Home
+                #quote-modal.modal
+                    .modal-content
+                        h3 Modal Header
+                        p Please fill all your details.
+                        form(action="", id="request-quote-form")
+                            .input-field
+                                input(placeholder="John Doe", id="rq-name", type="text", class="validate")
+                                label(for="rq-name") Name
+                            .input-field
+                                input(placeholder="johndoe@gmail.com", id="rq-email", type="email", class="validate")
+                                label(for="rq-email") Email
+                            .input-field
+                                input(placeholder="10 Digit Mobile No", id="rq-phone", type="tel", class="validate")
+                                label(for="rq-phone") Phone    
+                            .input-field
+                                input(placeholder="575001", id="rq-pincode", type="number", class="validate")
+                                label(for="rq-pincode") Pincode
+                            .input-field
+                                input(placeholder="Mangalore", id="rq-location", type="text", class="validate")
+                                label(for="rq-location") Location
+                            .input-field
+                                textarea#rq-message.materialize-textarea  
+                                label(for="rq-message")  Message                                                                                           
+                    .modal-footer
+                        a.modal-send.waves-effect.waves-green.btn.btn-flat(href="#") Send
+                        a.modal-close.waves-effect.waves-green.btn.btn-flat(href="#") Close
+
+
 

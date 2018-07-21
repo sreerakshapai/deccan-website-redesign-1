@@ -28,7 +28,7 @@ block content
                                             strong Dimensions: 
                                             |  ϕ 640mm, (H) 400mm                                       
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Sindhushree 25")
                                                 i.material-icons shopping_cart
                             .col.s3
                                 .card.product-card.z-depth-2
@@ -41,7 +41,7 @@ block content
                                             strong Dimensions: 
                                             | ϕ 470mm, (H) 215mm
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Sindhushree 18")
                                                 i.material-icons shopping_cart
                             .col.s3
                                 .card.product-card.z-depth-2
@@ -54,7 +54,7 @@ block content
                                             strong Dimensions: 
                                             |  ϕ 540mm, (H) 230mm
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Sindhushree 21")
                                                 i.material-icons shopping_cart
 
                         .row.center-align
@@ -68,9 +68,8 @@ block content
                                         p.price MRP: ₹ 140/-
                                       
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Shramashree 16")
                                                 i.material-icons shopping_cart
-                        .row.center-align
                             h3 Butti with Molded Handles                           
                             .col.s3
                                 .card.product-card.z-depth-2
@@ -83,8 +82,8 @@ block content
                                             strong Dimensions: 
                                             | (ϕ) 530mm, (H) 165mm
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart             
+                                             a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Jayashree Butti")
+                                                i.material-icons shopping_cart                
                         .row.center-align
                             h3 Buckets                           
                             .col.s3
@@ -98,10 +97,38 @@ block content
                                             strong Dimensions: 
                                             |ϕ 335mm, (H) 400mm
                                         .right-align
-                                            a.btn-floating.waves-effect.waves-light.red
-                                                i.material-icons shopping_cart                                      
+                                            a.btn-floating.waves-effect.waves-light.red.request-quote.modal-trigger(data-target="quote-modal", data-item="Buckets 17 Ltrs")
+                                                i.material-icons shopping_cart                                                  
                 .center-align
                     a(href="material-handling-solutions.html" class="waves-effect waves-light btn-large red") 
                         i.material-icons.left home
                         | Home
+
+                #quote-modal.modal
+                    .modal-content
+                        h3 Modal Header
+                        p Please fill all your details.
+                        form(action="", id="request-quote-form")
+                            .input-field
+                                input(placeholder="John Doe", id="rq-name", type="text", class="validate")
+                                label(for="rq-name") Name
+                            .input-field
+                                input(placeholder="johndoe@gmail.com", id="rq-email", type="email", class="validate")
+                                label(for="rq-email") Email
+                            .input-field
+                                input(placeholder="10 Digit Mobile No", id="rq-phone", type="tel", class="validate")
+                                label(for="rq-phone") Phone    
+                            .input-field
+                                input(placeholder="575001", id="rq-pincode", type="number", class="validate")
+                                label(for="rq-pincode") Pincode
+                            .input-field
+                                input(placeholder="Mangalore", id="rq-location", type="text", class="validate")
+                                label(for="rq-location") Location
+                            .input-field
+                                textarea#rq-message.materialize-textarea  
+                                label(for="rq-message")  Message                                                                                           
+                    .modal-footer
+                        a.modal-send.waves-effect.waves-green.btn.btn-flat(href="#") Send
+                        a.modal-close.waves-effect.waves-green.btn.btn-flat(href="#") Close
+
 
